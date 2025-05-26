@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.model-loader-container {
+  @apply relative flex items-center justify-center w-full h-full;
+}
+.model-loader-canvas {
+  @apply absolute top-0 left-0 w-full h-full z-0;
+  pointer-events: none;
+}
+.model-loading-indicator {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-lg text-gray-700 dark:text-gray-300;
+}
+.model-loading-spinner {
+  @apply animate-spin inline-block w-6 h-6 border-2 border-current border-t-transparent rounded-full mr-2;
+}
+.model-error-message {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 p-4 bg-red-200 dark:bg-red-700 text-red-700 dark:text-red-200 rounded-md;
+}
+@keyframes pulse {
+  0%,100%{opacity:1}
+  50%{opacity:.5}
+}
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (max-width:768px) {
+  .model-loading-indicator {
+    @apply text-base;
+  }
+  .model-error-message {
+    @apply text-sm;
+  }
+}
