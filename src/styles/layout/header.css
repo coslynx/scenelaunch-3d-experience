@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-white {
+background-color: #ffffff;
+}
+
+.shadow-md {
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.container {
+width: 100%;
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+.mx-auto {
+margin-left: auto;
+margin-right: auto;
+}
+
+.py-4 {
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+
+.px-6 {
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+}
+
+.flex {
+display: flex;
+}
+
+.items-center {
+align-items: center;
+}
+
+.justify-between {
+justify-content: space-between;
+}
+
+.text-2xl {
+font-size: 1.5rem;
+line-height: 2rem;
+}
+
+.font-bold {
+font-weight: 700;
+}
+
+.text-gray-800 {
+color: #1f2937;
+}
+
+.text-gray-600 {
+color: #4b5563;
+}
+
+.hover\:text-gray-800:hover {
+color: #1f2937;
+}
+
+.space-x-6> :not([hidden])~ :not([hidden]) {
+margin-left: 1.5rem;
+}
+
+/* accessibility: Provide keyboard navigation for all interactive elements */
+/* a11y */
+a:focus {
+outline: 2px solid var(--color-primary);
+outline-offset: 2px;
+}
+
+/* Responsive design for larger screens */
+/* a11y */
+@media (min-width: 768px) {
+.container {
+max-width: 768px;
+}
+}
+
+/* a11y */
+@media (min-width: 1024px) {
+.container {
+max-width: 1024px;
+}
+
+.px-6 {
+padding-left: 2rem;
+padding-right: 2rem;
+}
+}
+
+/* a11y */
+@media (min-width: 1280px) {
+.container {
+max-width: 1280px;
+}
+}
