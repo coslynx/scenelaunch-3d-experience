@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-container {
+  @apply relative flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 overflow-hidden;
+}
+
+.hero-section {
+  @apply relative h-screen flex items-center justify-center text-center py-24 px-6;
+}
+
+.hero-content {
+  @apply relative z-10;
+}
+
+.hero-content h1 {
+  @apply text-4xl font-bold mb-4;
+  will-change: transform, opacity;
+}
+
+.hero-content p {
+  @apply text-lg;
+  will-change: transform, opacity;
+}
+
+.hero-button {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.hero-button:hover {
+  transform: scale(1.05);
+}
+
+.hero-canvas {
+  @apply absolute inset-0 w-full h-full z-[-1] pointer-events-none;
+}
+
+.features-section {
+  @apply py-16 px-6;
+}
+
+.features-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.feature-item {
+  @apply p-6 rounded-md shadow-md dark:shadow-none bg-white dark:bg-gray-800;
+}
+
+.feature-item h3 {
+  @apply text-xl font-semibold mb-2;
+}
+
+.feature-item p {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.gallery-section {
+  @apply py-16 px-6;
+}
+
+.gallery-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.gallery-item {
+  @apply relative overflow-hidden rounded-md shadow-md;
+}
+
+.gallery-item img {
+  @apply w-full h-auto object-cover transition-transform duration-300;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.cta-section {
+  @apply py-16 px-6 text-center;
+}
+
+.cta-button {
+  @apply bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    @apply py-16;
+  }
+  .hero-content h1 {
+    @apply text-3xl;
+  }
+
+  .features-grid {
+    @apply grid-cols-1;
+  }
+}
